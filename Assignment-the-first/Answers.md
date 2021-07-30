@@ -23,7 +23,7 @@
        so the only danger coming from low quality score is the off chance that a matching and seemingly normal index is, in reality, not. For indexes, I think
        a more relaxed threshold of 20 is decent. 
     4. I used "for FILE in /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz; do echo $(zcat $FILE | sed -n "2~4p" | grep -c "N"); done"
-       All up, there were 
+       All up, there were indexes 3976613 containing an N.
     
 ## Part 2
 1. Define the problem
@@ -43,8 +43,8 @@
    Additionally, the program will produce 52 files. 2 for read 1 and read 2 of each index bucket (2 * 24), 2 for read 1 and read 2 of our index swapping bucket, and 2 for read
    1 and read 2 of our low-quality data bucket.
    
-4. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ).
-5. Pseudocode
+3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ).
+4. Pseudocode
    
    Set up env and variables with #!/usr/bin/env python3 and argparse inputs for read1, read2, index1, index2, and index identity file. 
    Also accept optional values for read_threshold and index_threshold
@@ -119,7 +119,7 @@
    
    
    
-7. High level functions. For each function, be sure to include:
+5. High level functions. For each function, be sure to include:
     1. Description/doc string
     2. Function headers (name and parameters)
     3. Test examples for individual functions
