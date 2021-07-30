@@ -22,7 +22,8 @@
        On the pther hand, Index sequences are a little less mysterious. We already hold them to a strict standard in having to match our index identity matrix,
        so the only danger coming from low quality score is the off chance that a matching and seemingly normal index is, in reality, not. For indexes, I think
        a more relaxed threshold of 20 is decent. 
-    4. 
+    4. I used "for FILE in /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz /projects/bgmp/shared/2017_sequencing/ 1294_S1_L008_R3_001.fastq.gz; do ADD=$(zcat $FILE | sed -n "2~4p" | grep -c "N"); counter=$(($counter+1)); echo $counter; done;"
+       All up, there were 
     
 ## Part 2
 1. Define the problem
