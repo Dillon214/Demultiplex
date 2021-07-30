@@ -22,7 +22,7 @@
        On the pther hand, Index sequences are a little less mysterious. We already hold them to a strict standard in having to match our index identity matrix,
        so the only danger coming from low quality score is the off chance that a matching and seemingly normal index is, in reality, not. For indexes, I think
        a more relaxed threshold of 20 is decent. 
-    4. I used "for FILE in /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz /projects/bgmp/shared/2017_sequencing/ 1294_S1_L008_R3_001.fastq.gz; do ADD=$(zcat $FILE | sed -n "2~4p" | grep -c "N"); counter=$(($counter+1)); echo $counter; done;"
+    4. I used "for FILE in /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz; do echo $(zcat $FILE | sed -n "2~4p" | grep -c "N"); done"
        All up, there were 
     
 ## Part 2
@@ -100,7 +100,8 @@
             read1 = "\n".join(((stored_lines[0][0] + "-".join(indices)),stored_lines[1][0],"+",stored_lines[3][0]))
             read2 = "\n".join(((stored_lines[0][1] + "-".join(indices)),stored_lines[1][1],"+",stored_lines[3][1]))
             
-            check first if the qscores (reads and indexes) contain anything that falls below our thresholds defined in our inputs or contain any Ns by calling phred_score():
+            check first if the qscores (reads and indexes) contain anything that falls below our thresholds defined in our inputs by calling phred_score()
+            or if there are any Ns in the sequences:
                    if so, write read 1 and read 2 we generated above into our Bad data bucket files and incremennt that bucket's counter by 1
                    
             Next check if index 1 is in index_1_identities.keys() and index 2 is in index 2 identities.keys():
