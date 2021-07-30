@@ -23,7 +23,7 @@
        so the only danger coming from low quality score is the off chance that a matching and seemingly normal index is, in reality, not. For indexes, I think
        a more relaxed threshold of 20 is decent. 
     4. I used "for FILE in /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz; do echo $(zcat $FILE | sed -n "2~4p" | grep -c "N"); done"
-       All up, there were indexes 3976613 containing an N.
+       All up, there were indexes 3976613 containing an N in each file.
     
 ## Part 2
 1. Define the problem
