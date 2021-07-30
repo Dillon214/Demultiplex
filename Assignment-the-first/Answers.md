@@ -17,8 +17,12 @@
     ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R3_001fastqgz](https://user-images.githubusercontent.com/73907611/127631662-45919bd5-78ad-4524-bd7f-a94e17f39291.png)
     ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R4_001fastqgz](https://user-images.githubusercontent.com/73907611/127631677-b639eec6-421e-4413-8111-4dfd5333d75b.png)
 
-    3. ```Your answer here```
-    4. ```Your answer here```
+    3. I believe that 30 is a good threshold for read quality scores. The read sequences by far the greatest unknown factor in any sequencing exercise, so it
+       is imperitive that the information we gather about them is accurate and not misrepresentative.  
+       On the pther hand, Index sequences are a little less mysterious. We already hold them to a strict standard in having to match our index identity matrix,
+       so the only danger coming from low quality score is the off chance that a matching and seemingly normal index is, in reality, not. For indexes, I think
+       a more relaxed threshold of 20 is decent. 
+    4. 
     
 ## Part 2
 1. Define the problem
