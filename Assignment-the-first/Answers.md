@@ -12,8 +12,13 @@
 
 2. Per-base NT distribution
     1. Use markdown to insert your 4 histograms here.
-    2. ```Your answer here```
+    ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R1_001fastqgz](https://user-images.githubusercontent.com/73907611/127631626-0cf892f9-ac1e-4561-9bb0-5e3c4d2eedd8.png)
+    ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R2_001fastqgz](https://user-images.githubusercontent.com/73907611/127631648-516f1884-5f87-4def-91a5-7a768c7dfa30.png)
+    ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R3_001fastqgz](https://user-images.githubusercontent.com/73907611/127631662-45919bd5-78ad-4524-bd7f-a94e17f39291.png)
+    ![_projects_bgmp_shared_2017_sequencing_1294_S1_L008_R4_001fastqgz](https://user-images.githubusercontent.com/73907611/127631677-b639eec6-421e-4413-8111-4dfd5333d75b.png)
+
     3. ```Your answer here```
+    4. ```Your answer here```
     
 ## Part 2
 1. Define the problem
