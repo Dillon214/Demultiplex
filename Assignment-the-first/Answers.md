@@ -65,8 +65,8 @@
    rev_comp(AAT) -> ATT
    
    
-   Create empty index identity dictionary, populate by parsing through index identity file. Sequences will be keys, index buxkets (B1, B9, etc) will be values. 
-   Create a second dictionary from the above one by using rev_conp() on the keys. 
+   Create empty index identity dictionary, populate by parsing through index identity file. Sequences will be keys, index buckets (B1, B9, etc) will be values. 
+   Create a second dictionary from the above one by using rev_conp() on the keys. Alternitively, create this one in parallel to the first while parsing.
    
    These dictionaries are called index_1_identities and index_2_identities
    
@@ -91,7 +91,7 @@
         stored_lines[i%4] = line
         if i%4 == 0:
         
-            First we need to define some variables we know we'll need, so we use the dictionary we just made to piece them together.
+           First we need to define some variables we know we'll need, so we use the dictionary we just made to piece them together.
             
             indices = stored_lines[1][2:]
             readqscores = "".join(stored_lines[3][0], stored_lines[3][1])
