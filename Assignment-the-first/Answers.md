@@ -116,7 +116,9 @@
                     
     Once we reach the end of our massive loop, we can return the tallies we counted for each index pair/bucket
     
-   
+    My thoughts: I will avoid calling convert phred in loop by instead converting quality thresholds to ascii.
+    
+    Accepted edits: Beagan suggests using sets for quickening logic. I think this is a good change, and will be implementing.
    
    
 5. High level functions. For each function, be sure to include:
@@ -136,3 +138,7 @@
         Takes a DNA nucleotide string, returns its reverse compliment 
         return(reverse compliment)
    rev_comp(AAT) -> ATT
+   
+   
+   
+   
