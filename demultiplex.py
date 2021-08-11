@@ -135,17 +135,16 @@ for i,line in enumerate(zip(*inputfiles_unzipped)):
         indexqscores = convert_phred("".join(stored_lines[3][2:]))
         read1 = "\n".join(((stored_lines[0][0] + "-".join(indices)),stored_lines[1][0],"+",stored_lines[3][0], "\n"))
         read2 = "\n".join(((stored_lines[0][1] + "-".join(indices)),stored_lines[1][1],"+",stored_lines[3][1], "\n"))
-        #raw_reads = "".join((stored_lines[1][0], stored_lines[1][1]))
-        # or "N" in raw_reads:
+        
+        
 
-        if stored_lines[1][2] in index1_seqs and stored_lines[1][3] in index2_seqs:
+        if min(readqscores) > readqthreshold and min(indexqscores) > indexqthreshold and stored_lines[1][2] in index1_seqs and stored_lines[1][3] in index2_seqs:
             destiny = index_MATCHES.get(indices, "SWAPS_")
             
         else:
             destiny = "BAD_DATA_"
 
-        if destiny != "BAD_DATA_" and not min(readqscores) > readqthreshold or not min(indexqscores) > indexqthreshold:
-            destiny = "BAD_DATA_"
+        
         
         DESTINY_COUNTER[destiny] += 1
         OUTPUT_DICT[destiny + "R1"].writelines(read1)
